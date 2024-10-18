@@ -4,17 +4,18 @@ declare(strict_types=1);
 
 namespace App;
 
-use Tempest\Http\Get;
-use Tempest\View\View;
-
 use function Tempest\view;
+    use Tempest\Http\Get;
+
+use Tempest\Http\StaticPage;
+use Tempest\View\View;
 
 final readonly class GlobalController
 {
     #[Get('/')]
     public function home(): View
     {
-        return view('views\home.view.php')
+        return view('views/home.view.php')
         ->data(
             htmlLang: 'en',
             htmlTitle: 'Home',
@@ -49,7 +50,7 @@ final readonly class GlobalController
     {
         return view('views\de\home.view.php')
         ->data(
-            htmlLang: 'en',
+            htmlLang: 'de',
             htmlTitle: 'About',
             // hasRandomBackground: true
         );
@@ -60,7 +61,7 @@ final readonly class GlobalController
     {
         return view('views\de\about.view.php')
         ->data(
-            htmlLang: 'en',
+            htmlLang: 'de',
             htmlTitle: 'About',
             // hasRandomBackground: true
         );
@@ -71,7 +72,7 @@ final readonly class GlobalController
     {
         return view('views\de\watch.view.php')
         ->data(
-            htmlLang: 'en',
+            htmlLang: 'de',
             htmlTitle: 'Watch',
             // hasRandomBackground: true
         );

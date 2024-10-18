@@ -10,4 +10,9 @@ export default defineConfig({
         },
         manifest: true,
     },
+    server: {
+        host: 'hier-zurich.test',
+        port: 5133,
+        strictPort: true,
+    },
 })
