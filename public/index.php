@@ -1,6 +1,5 @@
 <?php
 
-use Spatie\Ignition\Ignition;
 use Tempest\Http\HttpApplication;
 
 require_once __DIR__ . '/../vendor/autoload.php';

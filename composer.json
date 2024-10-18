@@ -30,7 +30,14 @@
             "Tests\\Tempest\\": "vendor/brendt/tempest/tests/"
         }
     },
-    "scripts": {},
+    "scripts": {
+        "core:update": [
+            "composer validate --strict --ansi",
+            "composer update --no-interaction --prefer-stable",
+            "composer bump --ansi",
+            "composer audit --ansi"
+        ]
+    },
     "minimum-stability": "dev",
     "prefer-stable": true,
     "config": {

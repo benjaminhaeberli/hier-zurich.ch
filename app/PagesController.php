@@ -4,10 +4,11 @@ declare(strict_types=1);
 
 namespace App;
 
-use function Tempest\path;
-use function Tempest\view;
 use Tempest\Http\Get;
 use Tempest\View\View;
+
+use function Tempest\path;
+use function Tempest\view;
 
 final readonly class PagesController
 {
