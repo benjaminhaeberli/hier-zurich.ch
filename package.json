@@ -1,8 +1,12 @@
 {
   "name": "hier-zurich.ch",
-  "author": "Benjamin Haeberli <hello@benjaminhaeberli.ch> (https://benjaminhaeberli.ch/)",
-  "private": true,
   "version": "0.1.0",
+  "private": true,
+  "author": {
+    "name": "Benjamin Haeberli",
+    "email": "hello@benjaminhaeberli.ch",
+    "url": "https://benjaminhaeberli.ch/"
+  },
   "repository": {
     "type": "git",
     "url": "https://github.com/benjaminhaeberli/hier-zurich.ch.git"
