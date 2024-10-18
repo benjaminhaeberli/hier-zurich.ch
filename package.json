@@ -1,0 +1,27 @@
+{
+  "name": "hier-zurich.ch",
+  "author": "Benjamin Haeberli <hello@benjaminhaeberli.ch> (https://benjaminhaeberli.ch/)",
+  "private": true,
+  "version": "0.1.0",
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/benjaminhaeberli/hier-zurich.ch.git"
+  },
+  "scripts": {
+    "start": "parcel ./assets/app.js --dist-dir public/dist",
+    "build": "parcel build ./assets/app.js --dist-dir public/dist"
+  },
+  "devDependencies": {
+    "autoprefixer": "^10.4.20",
+    "parcel": "^2.8.3",
+    "postcss": "^8.4.23",
+    "tailwindcss": "^3.3.2"
+  },
+  "browserslist": [
+    "last 2 versions"
+  ],
+  "dependencies": {
+    "@tailwindcss/nesting": "^0.0.0-insiders.565cd3e",
+    "fast-glob": "^3.3.2"
+  }
+}
