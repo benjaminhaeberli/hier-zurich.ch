@@ -1,11 +1,10 @@
 <?php
-$htmlTitle = 'Home';
-$htmlLang = 'en';
-$hasRandomBackground = true;
-include_once '../partials/header.php';
-?>
 
-<h1 class="text-red-500">Welcome to My Website</h1>
-<p>This is the home page content.</p>
+use Spatie\Ignition\Ignition;
+use Tempest\Http\HttpApplication;
 
-<?php include_once '../partials/footer.php'; ?>
+require_once __DIR__ . '/../vendor/autoload.php';
+
+HttpApplication::boot(__DIR__ . '/../')->run();
+
+exit;

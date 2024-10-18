@@ -7,6 +7,13 @@ yarn-error.log*
 pnpm-debug.log*
 lerna-debug.log*
 
+# PHP
+.env
+composer.lock
+/vendor/
+
+# Assets
+package-lock.json
 node_modules
 dist
 dist-ssr
