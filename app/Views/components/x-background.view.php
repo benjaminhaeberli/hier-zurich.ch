@@ -1,14 +1,6 @@
-<?php
-$images = [
-    '/images/fossile-1.jpg',
-    '/images/fossile-2.jpg',
-    '/images/river-1.jpg',
-];
-?>
-
 <style>
     #background {
-        background-image: url('<?= $images[array_rand($images)] ?>');
+        background-image: url('{{ $this->url }}');
     }
 </style>
 

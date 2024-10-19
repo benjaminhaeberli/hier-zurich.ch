@@ -7,17 +7,19 @@ namespace App;
 use Tempest\Http\Get;
 use Tempest\View\View;
 
-use function Tempest\path;
 use function Tempest\view;
 
 final readonly class PagesController
 {
-    const PAGES_PATH = '/Views/pages/';
+    public const PAGES_PATH = '/Views/pages/';
 
     #[Get('/')]
-    public function hom(): View
+    public function home(): View
     {
-        return view(self::PAGES_PATH . 'home.view.php');
+        return view(self::PAGES_PATH . 'home.view.php')
+            ->data(
+                randomBackgroundUrl: $this->backgroundUrl(),
+            );
     }
 
     #[Get('/about')]
@@ -35,7 +37,10 @@ final readonly class PagesController
     #[Get('/de')]
     public function homeDE(): View
     {
-        return view(self::PAGES_PATH . 'de/home.view.php');
+        return view(self::PAGES_PATH . 'de/home.view.php')
+            ->data(
+                randomBackgroundUrl: $this->backgroundUrl(),
+            );
     }
 
     #[Get('/de/about')]
@@ -48,5 +53,18 @@ final readonly class PagesController
     public function watchDE(): View
     {
         return view(self::PAGES_PATH . 'de/watch.view.php');
+    }
+
+    private function backgroundUrl(): string
+    {
+        /** @var string $url */
+        $url = collect([
+            '/images/fossile-1.jpg',
+            '/images/fossile-2.jpg',
+            '/images/river-1.jpg',
+        ])
+            ->random();
+
+        return $url;
     }
 }
